@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>                              
+    <meta charset="UTF-8">
+    <title>Ultimate Gaming Hub</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #050505;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* LOADER */
+        #loader {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: cyan;
+            font-size: 25px;
+            z-index: 9999;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 30px;
+            background: #000;
+            position: sticky;
+            top: 0;
+        }
+
+        .logo {
+            color: cyan;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .menu a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            color: cyan;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: radial-gradient(circle, #111, black);
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            color: cyan;
+        }
+
+        .hero button {
+            padding: 12px 25px;
+            background: cyan;
+            border: none;
+            margin-top: 20px;
+        }
+
+        /* GAMES */
+        .games {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: #111;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.07);
+            box-shadow: 0 0 25px cyan;
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .card h3 {
+            padding: 10px;
+        }
+
+        .card button {
+            margin: 10px;
+            padding: 10px;
+            width: 90%;
+            background: red;
+            border: none;
+            color: white;
+        }
+
+        /* VIDEO */
+        .video {
+            text-align: center;
+            padding: 50px;
+        }
+
+        iframe {
+            border-radius: 10px;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+            padding: 50px;
+        }
+
+        input, textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px;
+            background: #222;
+            color: white;
+            border: none;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: black;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">Loading Gaming World... 🎮</div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">🎮 Ultimate Gaming</div>
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#games">Games</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Welcome Gamer 🔥</h1>
+    <p>Ultimate Gaming Experience</p>
+    <button onclick="goGames()">Start Playing</button>
+</div>
+
+<!-- GAMES -->
+<div class="games" id="games">
+
+    <div class="card">
+        <img src="https://via.placeholder.com/300">
+        <h3>BGMI</h3>
+        <button onclick="download()">Download</button>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/300">
+        <h3>Free Fire</h3>
+        <button onclick="download()">Download</button>
+    </div>
+
+</div>
+
+<!-- VIDEO -->
+<div class="video">
+    <h2>Gameplay 🎥</h2>
+    <iframe width="300" height="200"
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ">
+    </iframe>
+</div>
+
+<!-- CONTACT -->
+<div class="contact" id="contact">
+    <h2>Contact</h2>
+    <input placeholder="Name"><br>
+    <input placeholder="Email"><br>
+    <textarea placeholder="Message"></textarea><br>
+    <button>Send</button>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p>© 2026 Ultimate Gaming Hub</p>
+</div>
+
+<script>
+    // Loader
+    window.onload = function() {
+        document.getElementById("loader").style.display = "none";
+    };
+
+    function download() {
+        alert("Download starting soon 🎮");
+    }
+
+    function goGames() {
+        document.getElementById("games").scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+</script>
+
+</body>
+</html>
